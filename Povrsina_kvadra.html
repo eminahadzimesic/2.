@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8"/>
+	<title >Povrsina kvadra</title>
+</head>
+<body>
+<form>
+	<div>
+        <label  for="stranica1">Unesite prvu stranicu kvadra</label>
+        <input  id="stranica1" type="text"/>   
+      </div>
+      <div>
+      	<label  for="stranica2">Unesite drugu stranicu kvadra</label>
+        <input  id="stranica2" type="text"/>  
+      </div>
+      <div>
+      	<label  for="stranica3">Unesite trecu stranicu kvadra</label>
+        <input  id="stranica3" type="text"/>  
+      </div>
+      <div>
+        <button  id="button" onclick="povrsinakvadra()">Izračunaj površinu kvadra</button>
+    </div>
+    
+    </form>
+
+	<script>
+		function povrsinakvadra(){
+		var elementStr1= document.getElementById('stranica1');
+		var stringStr1 = elementStr1.value; 
+        var a= parseFloat(stringStr1);
+
+        var elementStr2= document.getElementById('stranica2');
+		var stringStr2 = elementStr2.value; 
+        var b= parseFloat(stringStr2);
+
+        var elementStr3= document.getElementById('stranica3');
+		var stringStr3 = elementStr3.value; 
+        var c= parseFloat(stringStr3);
+
+		var p;
+		var ab=a*b;
+		var ac=a*c;
+		var bc=b*c;
+		var s;
+		const t=2;
+        if ((isNaN(a)== false)  && (isNaN(b)== false)  &&(isNaN(c)== false)  && (a>0)&& (b>0)&& (ac>0))
+        {
+        	s=ab+ac+bc;
+        	p=t*s;
+	    		
+	    	
+	    	window.alert("Povrsina je:"+p);
+	
+	        } 
+	        else window.alert("Molimo vas unesite dimenzije stranica pravilno, stranica ne moze biti negativna i ne moze biti slovo!")
+		}
+	</script>
+
+
+	
+</body>
+</html>
